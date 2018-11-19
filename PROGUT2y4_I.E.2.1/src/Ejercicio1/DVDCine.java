@@ -1,4 +1,5 @@
-package clases;
+package Ejercicio1;
+
 
 /**
  * Escribe una clase que represente una película en DVD de nombre DVDCine con
@@ -6,7 +7,7 @@ package clases;
  * segundo. Esta clase contará con un constructor que admite como argumentos
  * todos los atributos de la clase.
  * 
- * @author antofer
+ * @author Antonio Torres Fernández
  *
  */
 public class DVDCine {
@@ -75,30 +76,40 @@ public class DVDCine {
 		this.resumen = resumen;
 
 	}
-
+	
 	/**
-	 * @return retorna una descripción completa de la película.
+	 * Muestra la información completa de la película
+	 * @return retorna una descripción completa de la película. 
 	 */
 	public String muestraDVDCine() {
 
 		//creamos la cadena de texto a devolver.
-		String texto = (titulo != tituloOriginal) ? titulo + " (" + tituloOriginal + ")" : titulo;
-		texto += " Dirigida por : " + director + "/n";
-		texto += "Reparto : " + reparto + "/n";
-		texto += "Género : " + genero + "/n";
-		texto += "Duración : " + muestraDuracion() + "/n";
+		String texto = (titulo != tituloOriginal) ? titulo + " (" + tituloOriginal + ")" + "\n": titulo + "\n";
+		texto += "Dirigida por : " + director + "\n";
+		texto+= "Año : " + anio + "\n";
+		texto += "Reparto : " + reparto + "\n";
+		texto += "Género : " + genero + "\n";
+		texto += "Duración : " + muestraDuracion() + "\n";
 		if (tieneResumen()) {
-			texto += "Resumen : " + resumen;
+			texto += "Resumen : " + resumen + "\n";
 		}else {
-			texto += "No tiene resumen";
+			texto += "No tiene resumen" + "\n";
+		}
+		
+		if (esThriller()) {
+			texto += "La pélicula es del género Thriller";
+		}else {
+			texto += "La película no es del género Thriller";
 		}
 		
 		//devolvemos la cadena montada.
 		return texto;
 
+		
 	}
 
 	/**
+	 * Comprueba si la película es un thriller
 	 * @return Este método retorna cierto (true), si la película pertenece a este género cinematográfico.
 	 */
 	public boolean esThriller() {
@@ -112,6 +123,7 @@ public class DVDCine {
 	}
 	
 	/**
+	 * Comprueba si la película tiene asignado un resumen
 	 * @return Retorna cierto si la película tiene el resumen escrito.
 	 */
 	public boolean tieneResumen() {
@@ -124,6 +136,7 @@ public class DVDCine {
 	}
 	
 	/**
+	 * Muestra duración de la película
 	 * @return Retorna la duración con el formato: "x min."
 	 */
 	public String muestraDuracion() {
