@@ -1,6 +1,6 @@
 package Tests;
 
-import Ejercicio5.Empleado;
+import Ejercicio05.Empleado;
 
 public class TestEmpleado {
 

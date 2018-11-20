@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"Ejercicio1"},{"l":"Ejercicio2"},{"l":"Ejercicio3"},{"l":"Ejercicio4"},{"l":"Ejercicio5"},{"l":"Ejercicio6"},{"l":"Ejercicio7y8"},{"l":"Tests"}]

@@ -2,7 +2,7 @@ package Tests;
 
 import java.util.ArrayList;
 
-import Ejercicio3.Cuenta;
+import Ejercicio03.Cuenta;
 
 public class TestCuenta {
 
