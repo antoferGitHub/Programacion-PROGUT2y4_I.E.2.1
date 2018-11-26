@@ -101,6 +101,7 @@ public class Triangulo {
 			}
 		}
 
+		System.out.println("Todo ok");
 		return tipo;
 	}
 
