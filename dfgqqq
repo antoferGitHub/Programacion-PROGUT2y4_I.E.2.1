@@ -1,0 +1,103 @@
+[1mdiff --git a/PROGUT2y4_I.E.2.1/src/Ejercicio11/Triangulo.java b/PROGUT2y4_I.E.2.1/src/Ejercicio11/Triangulo.java[m
+[1mindex 522db3e..095beff 100644[m
+[1m--- a/PROGUT2y4_I.E.2.1/src/Ejercicio11/Triangulo.java[m
+[1m+++ b/PROGUT2y4_I.E.2.1/src/Ejercicio11/Triangulo.java[m
+[36m@@ -1,9 +1,9 @@[m
+ package Ejercicio11;[m
+ [m
+ /**[m
+[31m- * Se quiere definir una clase Triangulo que represente al polígono Triangulo.[m
+[32m+[m[32m * Se quiere definir una clase Triangulo que represente al polï¿½gono Triangulo.[m
+  * [m
+[31m- * @author Antonio Torres Fernández[m
+[32m+[m[32m * @author Antonio Torres Fernï¿½ndez[m
+  *[m
+  */[m
+ public class Triangulo {[m
+[36m@@ -13,7 +13,7 @@[m [mpublic class Triangulo {[m
+ 	private double lado3;[m
+ [m
+ 	/**[m
+[31m-	 * Constructor por defecto sin parámetros[m
+[32m+[m	[32m * Constructor por defecto sin parï¿½metros[m
+ 	 */[m
+ 	public Triangulo() {[m
+ 		lado1 = 1;[m
+[36m@@ -25,9 +25,9 @@[m [mpublic class Triangulo {[m
+ 	/**[m
+ 	 * Constructor sobrecargado[m
+ 	 * [m
+[31m-	 * @param lado1 Medida del lado 1 del triángulo[m
+[31m-	 * @param lado2 Medida del lado 2 del triángulo[m
+[31m-	 * @param lado3 Medida del lado 3 del triángulo[m
+[32m+[m	[32m * @param lado1 Medida del lado 1 del triï¿½ngulo[m
+[32m+[m	[32m * @param lado2 Medida del lado 2 del triï¿½ngulo[m
+[32m+[m	[32m * @param lado3 Medida del lado 3 del triï¿½ngulo[m
+ 	 */[m
+ 	public Triangulo(double lado1, double lado2, double lado3) {[m
+ 		this.lado1 = lado1;[m
+[36m@@ -37,10 +37,10 @@[m [mpublic class Triangulo {[m
+ 	}[m
+ [m
+ 	/**[m
+[31m-	 * Compara dos triángulos[m
+[32m+[m	[32m * Compara dos triï¿½ngulos[m
+ 	 * [m
+[31m-	 * @param a Primer triángulo a comparar[m
+[31m-	 * @param b Segundo triángulo a comparar[m
+[32m+[m	[32m * @param a Primer triï¿½ngulo a comparar[m
+[32m+[m	[32m * @param b Segundo triï¿½ngulo a comparar[m
+ 	 * @return Retorna Verdadero si los triangulos indicados son iguales[m
+ 	 */[m
+ 	public static boolean compareTo_Triangulos(Triangulo a, Triangulo b) {[m
+[36m@@ -52,38 +52,30 @@[m [mpublic class Triangulo {[m
+ 	}[m
+ [m
+ 	/**[m
+[31m-	 * Determina si un grupo de triángulos son iguales[m
+[32m+[m	[32m * Determina si un grupo de triï¿½ngulos son iguales[m
+ 	 * [m
+ 	 * @param triangulos Array con el conjunto de triangulos a comparar[m
+ 	 * @return Retorna Verdadero si todos los triangulos indicados son iguales[m
+ 	 */[m
+[31m-	public static boolean compare_vTriangulos(Triangulo[] triangulos) {[m
+[31m-		double l1 = 0, l2 = 0, l3 = 0;[m
+ [m
+[31m-		for (Triangulo tActivo : triangulos) {[m
+[31m-			if (l1 == 0) {[m
+[31m-				l1 = tActivo.lado1;[m
+[31m-				l2 = tActivo.lado2;[m
+[31m-				l3 = tActivo.lado3;[m
+[32m+[m	[32mpublic static boolean compare_vTriangulos(Triangulo[] triangulos) {[m
+ [m
+[31m-			} else {[m
+[31m-				if (l1 != tActivo.lado1 || l2 != tActivo.lado2 || l3 != tActivo.lado3) {[m
+[31m-					return false;[m
+[31m-				}[m
+[31m-			}[m
+[32m+[m		[32mboolean iguales = true;[m
+[32m+[m		[32mfor (int x = 0; x < triangulos.length; x++) {[m
+[32m+[m			[32miguales = compareTo_Triangulos(triangulos[x], triangulos[x + 1]);[m
+[32m+[m			[32mif (!iguales)[m
+[32m+[m				[32mbreak;[m
+ 		}[m
+ [m
+[31m-		return true;[m
+[32m+[m		[32mreturn iguales;[m
+ 	}[m
+ [m
+ 	/**[m
+[31m-	 * Comprueba y devuelve el tipo de triángulo[m
+[32m+[m	[32m * Comprueba y devuelve el tipo de triï¿½ngulo[m
+ 	 * [m
+[31m-	 * @param t Objeto de la clase Triangulo que se comparará[m
+[31m-	 * @return Retorna un entero correspondiente al tipo de triangulo[m
+[31m-	 * 1 - Equilátero[m
+[31m-	 * 2 - Isósceles[m
+[31m-	 * 3 - Escaleno[m
+[32m+[m	[32m * @param t Objeto de la clase Triangulo que se compararï¿½[m
+[32m+[m	[32m * @return Retorna un entero correspondiente al tipo de triangulo 1 - Equilï¿½tero[m
+[32m+[m	[32m *         2 - Isï¿½sceles 3 - Escaleno[m
+ 	 */[m
+ 	public int tipoTriangulo(Triangulo t) {[m
+ 		int tipo = 0;[m

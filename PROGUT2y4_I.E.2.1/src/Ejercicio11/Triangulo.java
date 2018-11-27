@@ -1,9 +1,9 @@
 package Ejercicio11;
 
 /**
- * Se quiere definir una clase Triangulo que represente al polígono Triangulo.
+ * Se quiere definir una clase Triangulo que represente al polï¿½gono Triangulo.
  * 
- * @author Antonio Torres Fernández
+ * @author Antonio Torres Fernï¿½ndez
  *
  */
 public class Triangulo {
@@ -13,7 +13,7 @@ public class Triangulo {
 	private double lado3;
 
 	/**
-	 * Constructor por defecto sin parámetros
+	 * Constructor por defecto sin parï¿½metros
 	 */
 	public Triangulo() {
 		lado1 = 1;
@@ -25,9 +25,9 @@ public class Triangulo {
 	/**
 	 * Constructor sobrecargado
 	 * 
-	 * @param lado1 Medida del lado 1 del triángulo
-	 * @param lado2 Medida del lado 2 del triángulo
-	 * @param lado3 Medida del lado 3 del triángulo
+	 * @param lado1 Medida del lado 1 del triï¿½ngulo
+	 * @param lado2 Medida del lado 2 del triï¿½ngulo
+	 * @param lado3 Medida del lado 3 del triï¿½ngulo
 	 */
 	public Triangulo(double lado1, double lado2, double lado3) {
 		this.lado1 = lado1;
@@ -37,10 +37,10 @@ public class Triangulo {
 	}
 
 	/**
-	 * Compara dos triángulos
+	 * Compara dos triï¿½ngulos
 	 * 
-	 * @param a Primer triángulo a comparar
-	 * @param b Segundo triángulo a comparar
+	 * @param a Primer triï¿½ngulo a comparar
+	 * @param b Segundo triï¿½ngulo a comparar
 	 * @return Retorna Verdadero si los triangulos indicados son iguales
 	 */
 	public static boolean compareTo_Triangulos(Triangulo a, Triangulo b) {
@@ -52,38 +52,30 @@ public class Triangulo {
 	}
 
 	/**
-	 * Determina si un grupo de triángulos son iguales
+	 * Determina si un grupo de triï¿½ngulos son iguales
 	 * 
 	 * @param triangulos Array con el conjunto de triangulos a comparar
 	 * @return Retorna Verdadero si todos los triangulos indicados son iguales
 	 */
+
 	public static boolean compare_vTriangulos(Triangulo[] triangulos) {
-		double l1 = 0, l2 = 0, l3 = 0;
 
-		for (Triangulo tActivo : triangulos) {
-			if (l1 == 0) {
-				l1 = tActivo.lado1;
-				l2 = tActivo.lado2;
-				l3 = tActivo.lado3;
-
-			} else {
-				if (l1 != tActivo.lado1 || l2 != tActivo.lado2 || l3 != tActivo.lado3) {
-					return false;
-				}
-			}
+		boolean iguales = true;
+		for (int x = 0; x < triangulos.length; x++) {
+			iguales = compareTo_Triangulos(triangulos[x], triangulos[x + 1]);
+			if (!iguales)
+				break;
 		}
 
-		return true;
+		return iguales;
 	}
 
 	/**
-	 * Comprueba y devuelve el tipo de triángulo
+	 * Comprueba y devuelve el tipo de triï¿½ngulo
 	 * 
-	 * @param t Objeto de la clase Triangulo que se comparará
-	 * @return Retorna un entero correspondiente al tipo de triangulo
-	 * 1 - Equilátero
-	 * 2 - Isósceles
-	 * 3 - Escaleno
+	 * @param t Objeto de la clase Triangulo que se compararï¿½
+	 * @return Retorna un entero correspondiente al tipo de triangulo 1 - Equilï¿½tero
+	 *         2 - Isï¿½sceles 3 - Escaleno
 	 */
 	public int tipoTriangulo(Triangulo t) {
 		int tipo = 0;
