@@ -80,13 +80,7 @@ public class Vehiculo {
 		String descripcion = "Modelo : " + modelo + "\n" + "Potencia : " + potencia + "\n"
 				+ "Tracción a las 4 ruedas : ";
 
-		if (getcRuedas()) {
-			descripcion += "SI";
-		} else {
-			descripcion += "NO";
-		}
-
-		return descripcion;
+		return  this.getcRuedas() ? descripcion + "SI" : descripcion + "NO";
 
 	}
 
