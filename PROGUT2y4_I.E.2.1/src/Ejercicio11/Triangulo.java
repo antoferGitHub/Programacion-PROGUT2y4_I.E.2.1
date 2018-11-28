@@ -61,7 +61,7 @@ public class Triangulo {
 	public static boolean compare_vTriangulos(Triangulo[] triangulos) {
 
 		boolean iguales = true;
-		for (int x = 0; x < triangulos.length; x++) {
+		for (int x = 0; x < triangulos.length - 1; x++) {
 			iguales = compareTo_Triangulos(triangulos[x], triangulos[x + 1]);
 			if (!iguales)
 				break;

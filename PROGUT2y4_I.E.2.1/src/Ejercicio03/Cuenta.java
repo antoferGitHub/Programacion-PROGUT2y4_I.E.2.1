@@ -156,7 +156,7 @@ public class Cuenta {
 
 	public String mostrarDatos() {
 		String datos = "Número de cuenta : " + numCuenta + "\n" + "DNI del titular : " + dni + "\n" + "Saldo actual : "
-				+ String.format("%,2f", saldo) + "\n" + "Interés anual aplicable : " + String.format("%,2f", interesA)
+				+ String.format("%.2f", saldo) + "\n" + "Interés anual aplicable : " + String.format("%.2f", interesA)
 				+ "%";
 		return datos;
 

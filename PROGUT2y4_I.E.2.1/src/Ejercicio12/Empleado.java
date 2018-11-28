@@ -25,7 +25,7 @@ public class Empleado {
 		if (horas > 40) {
 			sueldoBruto += ((horas - 40) * 1.5) * tarifa;
 		}
-		return nombre + " trabajÛ " + horas + " horas con una tarifa de " + tarifa + " y cobrar· " + sueldoBruto + "Ä";
+		return nombre + " trabaj√≥ " + horas + " horas con una tarifa de " + tarifa + "‚Ç¨ y cobrar√° " + sueldoBruto + "‚Ç¨";
 	}
 
 }
