@@ -12,8 +12,8 @@ public class Portatil extends Ordenador{
 		this.peso = 0;
 	}
 	
-	public Portatil(int ram, int hdd, String pro, String gra, String marca, int tamanoPantalla, int peso) {
-		super(ram, hdd, pro, gra);
+	public Portatil(int ram, int hdd, String pro, String gra, String marca, int tamanoPantalla, int peso,float precio) {
+		super(ram, hdd, pro, gra,precio);
 		this.marca = marca;
 		this.tamanoPantalla = tamanoPantalla;
 		this.peso = peso;

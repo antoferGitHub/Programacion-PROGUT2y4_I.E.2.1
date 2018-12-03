@@ -38,9 +38,7 @@ public class TestCuenta {
 							System.out.println("La cantidad introducida no es correcta. Intentelo de nuevo.");
 							cajero.next();
 							rep = true;
-						} finally {
-							break;
-						}
+						} 
 					} while (!rep);
 
 				}
@@ -56,9 +54,7 @@ public class TestCuenta {
 						System.out.println("El dato introducido no es correcto. Intentelo de nuevo.");
 						cajero.next();
 						rep = true;
-					} finally {
-						break;
-					}
+					} 
 				} while (!rep);
 				break;
 			case 4:////////////////////////////////////////////////////////////////////
